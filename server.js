@@ -1,5 +1,5 @@
 const express = require('express');
-
+const port = process.env.PORT || 3000;//this port is used dynamically by heroku(heroku will call start because he doesnt know the name of the app).If it doesnt exist, set it to 3000
 var app = express();//creates the app
 const hbs = require('hbs');
 const fs = require('fs');
@@ -51,7 +51,7 @@ app.get('/', (req,res) =>{//root route: localhost:3000
 
 app.listen(3000, () =>
 {
-    console.log('Server is up on port 3000');// aditional function that executes 
+    console.log(`Server is up on port ${port}`);// aditional function that executes 
 });//binds the application to a port on our machine. 3000 is a common port for developing locally. Is going to listen to requests until you tell it to stop.
 
 //At response header we have Content-Type: tells the client what type of data came back. It could be a HTML website, text, JSON data and the client could be a web browser,iphone android device..
