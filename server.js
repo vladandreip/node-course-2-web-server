@@ -20,10 +20,11 @@ app.use((req,res,next) => {//the function is executed every time the app receive
     });
     next();//if we dont call next, it wont fire app.get. Moves to the next piece of the middleware 
 });//app.use is how you register middleware. We might make a database request to see if a user is authentificated. We use next to tell express when we are done 
+/*
 app.use((req,res)=> {
     res.render('mantenance.hbs');
     //by not calling next, every request will stop here
-});
+});*/
 app.use(express.static(__dirname + '/public')) //takes the absolute path to the folder you want to serve up. __dirname stores the path to the projects directory. It store the path to node-web-server 
 //it is this way because when moving the project from place to place, you might have different directory names. 
 hbs.registerHelper('screamIt', (text) =>{
