@@ -49,7 +49,7 @@ app.get('/', (req,res) =>{//root route: localhost:3000
 //req stores information about the request coming in(headers used, body information )
 //res used to responde to the http request in every way you want -> customize data you want to send back 
 
-app.listen(3000, () =>
+app.listen(port, () =>
 {
     console.log(`Server is up on port ${port}`);// aditional function that executes 
 });//binds the application to a port on our machine. 3000 is a common port for developing locally. Is going to listen to requests until you tell it to stop.
