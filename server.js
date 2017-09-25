@@ -67,6 +67,9 @@ app.get('/about', (req, res) => {//this is the second route
     });//helps you render any of the templates you have set up with your current view engine. Rendered is like processing. Second argument for passing data
     //res.send('About page') case was rendered by html.
 });
+app.get('/projects',(req,res) =>{
+    res.render('projects.hbs');
+});
 
 app.get('/bad', (req, res) =>{
     res.send({
